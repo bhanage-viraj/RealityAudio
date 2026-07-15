@@ -15,7 +15,11 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "RealityAudio"
+            name: "RealityAudio",
+            linkerSettings: [
+                .linkedFramework("RealityKit"),
+                .linkedFramework("AVFoundation"),
+            ]
         ),
         .testTarget(
             name: "RealityAudioTests",
